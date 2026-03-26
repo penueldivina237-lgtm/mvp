@@ -1,0 +1,34 @@
+:root{
+  --bg:#070707; --panel:#0f0f0f; --muted:#d8d8d8; --accent:#d4af37; --glass:rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Georgia, serif; background:var(--bg); color:#eee; margin:0}
+.container{max-width:1200px;margin:0 auto;padding:18px}
+.site-header{position:sticky;top:0;background:linear-gradient(180deg,rgba(0,0,0,0.6),transparent);border-bottom:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(6px);z-index:1000}
+.header-grid{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--accent);letter-spacing:1px}
+.controls{display:flex;gap:10px;align-items:center}
+.controls input, .controls select{padding:10px 12px;border-radius:8px;border:1px solid var(--glass);background:#0b0b0b;color:#fff}
+.main-area .intro{padding:22px 0}
+.lead{color:var(--muted);max-width:800px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-top:18px}
+.card{background:var(--panel);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,0.03)}
+.thumb-wrap{height:160px;overflow:hidden}
+.thumb{width:100%;height:100%;object-fit:cover;display:block}
+.meta{padding:12px}
+.title{font-size:1.05rem;margin:0 0 6px}
+.meta-line{color:var(--muted);font-size:0.88rem;margin-bottom:8px}
+.tags{color:#cfcfcf;font-size:0.85rem;margin-bottom:10px}
+.card-actions{display:flex;gap:8px}
+.btn{padding:8px 12px;border-radius:8px;border:1px solid transparent;background:transparent;color:#fff;cursor:pointer}
+.btn.primary{background:var(--accent);color:#111}
+.btn.outline{border-color:var(--accent);color:var(--accent)}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);backdrop-filter:blur(3px);}
+.modal[aria-hidden="true"]{display:none}
+.modal-panel{background:#0b0b0b;padding:18px;border-radius:12px;width:min(560px,92vw);border:1px solid rgba(255,255,255,0.04)}
+.modal-close{float:right;border:0;background:transparent;color:#fff;font-size:18px}
+label{display:block;margin:10px 0;color:var(--muted)}
+input[type=text], input[type=email]{width:100%;padding:10px;border-radius:8px;border:1px solid var(--glass);background:#0d0d0d;color:#fff}
+.modal-actions{display:flex;gap:10px;margin-top:12px}
+.hidden{display:none}
+@media (max-width:600px){.header-grid{flex-direction:column;gap:10px}.thumb-wrap{height:140px}}

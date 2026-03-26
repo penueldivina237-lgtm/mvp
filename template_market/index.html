@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Template Market — 100 Frontend Templates</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Search and purchase from 100 high-demand website templates for the Canada market.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">Template Market</div>
+      <div class="controls">
+        <input id="search" placeholder="Search templates (e.g. plumber, restaurant)" aria-label="Search templates">
+        <select id="category">
+          <option value="all">All Categories</option>
+        </select>
+        <select id="sort">
+          <option value="popular">Sort: Popular</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-area">
+    <section class="intro">
+      <h1>100 High‑Demand Website Templates</h1>
+      <p class="lead">Browse, preview and purchase frontend templates tailored for small businesses in Canada. Images are fetched from the web for quick previews.</p>
+    </section>
+
+    <section>
+      <div id="results" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- Purchase modal (front-end only) -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button id="modalClose" class="modal-close">✕</button>
+      <h2 id="modalTitle">Purchase template</h2>
+      <form id="buyForm">
+        <label>Name<input name="name" required></label>
+        <label>Email<input name="email" type="email" required></label>
+        <p id="selectedTemplate"></p>
+        <div class="modal-actions">
+          <button type="submit" class="btn primary">Proceed to payment</button>
+          <button type="button" id="modalCancel" class="btn outline">Cancel</button>
+        </div>
+      </form>
+      <div id="paymentResult" class="hidden"></div>
+    </div>
+  </div>
+
+  <template id="cardTpl">
+    <div class="card">
+      <div class="thumb-wrap"><img loading="lazy" class="thumb"></div>
+      <div class="meta">
+        <h3 class="title"></h3>
+        <div class="meta-line"><span class="category"></span> · <span class="price"></span></div>
+        <p class="tags"></p>
+        <div class="card-actions">
+          <button class="btn preview">Preview</button>
+          <button class="btn buy primary">Buy</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
