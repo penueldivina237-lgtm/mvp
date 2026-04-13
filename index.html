@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TemplateHub – Affordable Frontend Templates</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">Template<span>Hub</span></a>
+      <nav class="nav" id="nav">
+        <a href="#templates">Templates</a>
+        <a href="#categories">Categories</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header__actions">
+        <button class="btn btn--outline" id="cartBtn">🛒 Cart (<span id="cartCount">0</span>)</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="badge">🔥 100+ Templates Available</span>
+        <h1>Beautiful Frontend&nbsp;Templates<br /><span>Built to Impress</span></h1>
+        <p>
+          Premium, fully responsive website templates for every purpose —
+          portfolios, e-commerce stores, landing pages, blogs, and more.
+          <strong>Starting at just $5.</strong>
+        </p>
+        <div class="hero__cta">
+          <a href="#templates" class="btn btn--primary">Browse Templates</a>
+          <a href="#pricing" class="btn btn--ghost">See Pricing</a>
+        </div>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><span class="stat__num">100+</span><span class="stat__label">Templates</span></div>
+        <div class="stat"><span class="stat__num">50k+</span><span class="stat__label">Downloads</span></div>
+        <div class="stat"><span class="stat__num">$5</span><span class="stat__label">Starting Price</span></div>
+        <div class="stat"><span class="stat__num">4.9★</span><span class="stat__label">Rating</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEARCH & FILTER ===== -->
+  <section class="filter-bar" id="templates">
+    <div class="container filter-bar__inner">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search templates…"
+        aria-label="Search templates"
+        class="search-input"
+      />
+      <div class="filter-buttons" id="filterButtons">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="portfolio">Portfolio</button>
+        <button class="filter-btn" data-category="landing">Landing Page</button>
+        <button class="filter-btn" data-category="ecommerce">E-Commerce</button>
+        <button class="filter-btn" data-category="blog">Blog</button>
+        <button class="filter-btn" data-category="dashboard">Dashboard</button>
+        <button class="filter-btn" data-category="saas">SaaS</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEMPLATE GRID ===== -->
+  <section class="templates-section">
+    <div class="container">
+      <div class="templates-grid" id="templatesGrid">
+        <!-- Populated by script.js -->
+      </div>
+      <p class="no-results hidden" id="noResults">No templates match your search. Try a different keyword.</p>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES ===== -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <h2 class="section-title">Browse by Category</h2>
+      <p class="section-sub">Find the perfect template for any project</p>
+      <div class="categories-grid">
+        <div class="category-card" data-filter="portfolio">
+          <span class="category-icon">🎨</span>
+          <h3>Portfolio</h3>
+          <p>Showcase your work professionally</p>
+        </div>
+        <div class="category-card" data-filter="landing">
+          <span class="category-icon">🚀</span>
+          <h3>Landing Page</h3>
+          <p>Convert visitors into customers</p>
+        </div>
+        <div class="category-card" data-filter="ecommerce">
+          <span class="category-icon">🛍️</span>
+          <h3>E-Commerce</h3>
+          <p>Sell products online with ease</p>
+        </div>
+        <div class="category-card" data-filter="blog">
+          <span class="category-icon">✍️</span>
+          <h3>Blog</h3>
+          <p>Share your stories and ideas</p>
+        </div>
+        <div class="category-card" data-filter="dashboard">
+          <span class="category-icon">📊</span>
+          <h3>Dashboard</h3>
+          <p>Admin panels and analytics UIs</p>
+        </div>
+        <div class="category-card" data-filter="saas">
+          <span class="category-icon">☁️</span>
+          <h3>SaaS</h3>
+          <p>Product and marketing pages</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Simple, Affordable Pricing</h2>
+      <p class="section-sub">No subscriptions. Pay once, own it forever.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Single Template</h3>
+          <div class="price">$5 <span>– $15</span></div>
+          <ul>
+            <li>✅ One template</li>
+            <li>✅ Fully responsive</li>
+            <li>✅ HTML / CSS / JS source</li>
+            <li>✅ Personal &amp; commercial use</li>
+            <li>✅ Free updates for 1 year</li>
+          </ul>
+          <a href="#templates" class="btn btn--primary">Browse Templates</a>
+        </div>
+        <div class="pricing-card pricing-card--featured">
+          <span class="badge">Best Value</span>
+          <h3>Bundle Pack</h3>
+          <div class="price">$29 <span>/ 10 templates</span></div>
+          <ul>
+            <li>✅ Any 10 templates</li>
+            <li>✅ Fully responsive</li>
+            <li>✅ HTML / CSS / JS source</li>
+            <li>✅ Personal &amp; commercial use</li>
+            <li>✅ Lifetime free updates</li>
+            <li>✅ Priority support</li>
+          </ul>
+          <a href="#templates" class="btn btn--primary">Get Bundle</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Unlimited Access</h3>
+          <div class="price">$49 <span>/ all templates</span></div>
+          <ul>
+            <li>✅ All 100+ templates</li>
+            <li>✅ Fully responsive</li>
+            <li>✅ HTML / CSS / JS source</li>
+            <li>✅ Personal &amp; commercial use</li>
+            <li>✅ Lifetime free updates</li>
+            <li>✅ Priority support</li>
+            <li>✅ New templates included</li>
+          </ul>
+          <a href="#templates" class="btn btn--primary">Get All Access</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What do I get when I purchase a template?</summary>
+          <p>You receive the full source files — HTML, CSS, and JavaScript — along with any assets used in the design. Everything is well-commented and ready to customise.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I use the templates for client projects?</summary>
+          <p>Yes! All templates come with a commercial-use licence, so you can use them for your own projects as well as for client work.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are the templates mobile-friendly?</summary>
+          <p>Absolutely. Every template is fully responsive and tested across modern browsers and devices.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you offer refunds?</summary>
+          <p>We offer a 7-day money-back guarantee if you're not satisfied with your purchase. Just reach out to our support team.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I download my purchase?</summary>
+          <p>After payment you'll receive an email with a download link. You can also access all your purchases from your account dashboard.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="logo">Template<span>Hub</span></a>
+        <p>Affordable, high-quality frontend templates for every project.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Templates</h4>
+        <a href="#templates">All Templates</a>
+        <a href="#categories">Portfolio</a>
+        <a href="#categories">Landing Pages</a>
+        <a href="#categories">E-Commerce</a>
+      </div>
+      <div class="footer__links">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Blog</a>
+        <a href="#">Affiliate Program</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer__links">
+        <h4>Support</h4>
+        <a href="#">Help Centre</a>
+        <a href="#">License Info</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 TemplateHub. All rights reserved. Prices in USD.</p>
+    </div>
+  </footer>
+
+  <!-- ===== CART MODAL ===== -->
+  <div class="modal-overlay hidden" id="cartModal">
+    <div class="modal">
+      <button class="modal__close" id="closeCart">✕</button>
+      <h2>Your Cart</h2>
+      <ul class="cart-items" id="cartItems"></ul>
+      <div class="cart-total">
+        Total: <strong id="cartTotal">$0</strong>
+      </div>
+      <button class="btn btn--primary full-width" id="checkoutBtn">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
